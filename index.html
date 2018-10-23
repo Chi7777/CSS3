@@ -22,6 +22,7 @@
                 <li></li>
                 <li></li>
                 <li></li>
+                <li></li>
             </ul>
         </div>
         <div id="p01" class="slide">
@@ -96,6 +97,9 @@
                     <th>編號</th>
                     <th>範例</th>
                     <th>說明</th>
+                    <th>編號</th>
+                    <th>範例</th>
+                    <th>說明</th>
                 </tr>
                 <tr>
                     <td width="40px">1</td>
@@ -103,8 +107,6 @@
                         <div class="box scale" onclick="subtext(2,'scale(2)')">scale</div>
                     </td>
                     <td>放大縮小(倍數)</td>
-                </tr>
-                <tr>
                     <td>2</td>
                     <td>
                         <div class="box rotate" onclick="subtext(2,'rotate(30deg)')">rotate</div>
@@ -117,19 +119,94 @@
                         <div class="box skew" onclick="subtext(2,'skew(30deg)')">skew</div>
                     </td>
                     <td>傾斜(deg度數)</td>
-                </tr>
-                <tr>
                     <td>4</td>
                     <td>
                         <div class="box translate" onclick="subtext(2,'translate(10px,20px)')">translate</div>
                     </td>
                     <td>移動(x,y)</td>
                 </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <div class="box rotate origin" onclick="subtext(2,'translate(10px,20px)')">旋轉中心</div>
+                    </td>
+                    <td>transform-origin:x y z;</td>
+                </tr>
             </table><br>
             <pre id="css2">transform:效果(數值);</pre>
         </div>
         <div id="p04" class="slide">
-            <p class="title">Animation 動畫</p>
+            <p class="title">Animation 動畫屬性總覽</p>
+            <hr>
+            <table>
+                <tr>
+                    <th>編號</th>
+                    <th>屬性</th>
+                    <th>說明</th>
+                </tr>
+                <tr>
+                    <td width="40px">1</td>
+                    <td width="200px">animation-name</td>
+                    <td>動畫名稱</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>animation-duration</td>
+                    <td>動畫持續時間，<b>預設 0</b>，單位 s 或 ms。</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>animation-delay</td>
+                    <td>動畫延遲播放時間，<b>預設 0</b>，單位 s 或 ms。</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>animation-iteration-count</td>
+                    <td>動畫播放次數，<b>預設 1</b>。無限次：infinite。</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>animation-timing-function</td>
+                    <td>動畫速度，<b>預設 ease</b>。</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>animation-direction</td>
+                    <td>動畫播放方向，<b>預設 normal</b>。其他還有 reverse、alternate、alternate-reverse。</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>animation-fill-mode</td>
+                    <td>動畫播放前後模式，<b>預設 none</b>。其他還有 forwards、backwards、both。</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>animation-play-state</td>
+                    <td>動畫播放或暫停狀態，<b>預設 running</b>。其他還有 paused。</td>
+                </tr>
+            </table>
+        </div>
+        <div id="p05" class="slide">
+            <p class="title">Animation 動畫（一）</p>
+            <hr>
+            <div class="box animation">重播</div>
+            <div class="box forwards">定格</div><br><br>
+            <pre>.animation {
+    animation:ball 3s infinite alternate;
+}
+.forwards {
+    animation:ball 3s 1;
+    animation-fill-mode:forwards;
+}
+@keyframes ball {   /*套用多個tranform時，用空白連接*/
+    0%{transform:translateX(300px) rotate(0deg);}
+    50%{transform:translateX(300px) rotate(0deg);}
+    100%{transform:translateX(800px) rotate(360deg);
+        border-radius:50%;background: #f00;}
+}</pre>
+        </div>
+        <div id="p06" class="slide">
+            <p class="title">Animation 動畫（二）</p>
             <hr>
             <div id="CARD" class="card">
                 <div id="BACK">
@@ -141,7 +218,7 @@
                     <img src="img/photo.jpg" width="500" height="500">
     </div>
                 </div>
-                <p style="color: #aaa;font-size:12px;transform:  translate(380px,10px);">©Photo by rawpixel.com from Pexels</p>
+                <p style="color: #aaa;font-size:12px;transform:  translate(30%,10px);">©Photo by rawpixel.com from Pexels</p>
                 <button>翻面</button>
                 <script>
                 $(document).ready(function() {
@@ -150,8 +227,6 @@
                     });
                 });
                 </script>
-            </div>
-            <div id="p05" class="slide"><h1>Page 5</h1>
             </div>
         </div>
         <!-- Load Facebook SDK for JavaScript -->

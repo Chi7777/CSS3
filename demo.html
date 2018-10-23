@@ -2,15 +2,8 @@
 <html>
 <head>
 	<title>CSS動畫進階課程</title>
-<script src="jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $(".box").toggleClass("clip");
-    });
-});
-</script>
 <style>
 *{
 		margin:0;
@@ -81,11 +74,6 @@ $(document).ready(function(){
 		-webkit-transform-style: preserve-3d;
 		-webkit-transform-origin: 50% 50% 0;
 	}
-
-	/*#BOX:hover{
-		-webkit-animation: GOGO 1.5s 1 linear;
-        animation-fill-mode:both;
-	}*/
    
 
 	.clip {
@@ -121,15 +109,22 @@ $(document).ready(function(){
     <div id="BACK">
     	<h1>網路位元組</h1>
         <p>歡迎加入網路位元組，我們是隸屬於第一校區資管系的網路組(學生組織)，協助提供系上老師及同學相關資訊服務。</p>
-        <center><img src="byte_logo_white.svg" alt="logo" width="200"></center>
+        <center><img src="img/byte_logo_white.svg" alt="logo" width="200"></center>
     </div>
     
     <div id="FRONT">
-    	<img src="photo.jpg" width="500" height="500">
+    	<img src="img/photo.jpg" width="500" height="500">
     </div>
     
 </div>
 <button>翻面</button>
 <p style="color: #aaa;font-size:12px;text-align: center;margin-top:15px;">Photo by rawpixel.com from Pexels</p>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $(".box").toggleClass("clip");
+    });
+});
+</script>
 </body>
 </html>

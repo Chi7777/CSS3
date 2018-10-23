@@ -36,10 +36,13 @@
             } else if ($(window).scrollTop() >= $("#p04").offset().top && $(window).scrollTop() < $("#p05").offset().top) {
                 $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
                 $(".nav li:eq(3)").css("background-color", "#00b7c0")
-            } else if ($(window).scrollTop() >= $("#p05").offset().top) {
+            } else if ($(window).scrollTop() >= $("#p05").offset().top && $(window).scrollTop() < $("#p06").offset().top) {
                 $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
                 $(".nav li:eq(4)").css("background-color", "#00b7c0")
-            }
+            } else if ($(window).scrollTop() >= $("#p06").offset().top) {
+                $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
+                $(".nav li:eq(5)").css("background-color", "#00b7c0")
+            } 
         })
 
         //點選右方導覽列時會到指定圖片
