@@ -12,7 +12,7 @@ html {
 body {
     overflow: hidden;
     height: 100%;
-    font-family: ‘Noto Sans TC’, sans-serif;
+    font-family: 'Noto Sans TC', sans-serif;
 }
 
 .slide {
@@ -79,14 +79,14 @@ p.title {
 }
 
 p.big_title {
-    font-family: 'Boogaloo', sans-serif;
+    font-family: 'Boogaloo', Noto Sans TC ,sans-serif;
     font-size: 5em;
     text-align: center;
 
 }
 
 p.subtitle {
-    font-family: 'Boogaloo', sans-serif;
+    font-family: 'Boogaloo', Noto Sans TC ,sans-serif;
     font-size: 2em;
     text-align: center;
 }
