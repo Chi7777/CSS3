@@ -84,6 +84,8 @@
                     document.getElementById("css1").innerHTML = 'transition:all 2s ' + text + ';';
                 } else if (num === 2) {
                     document.getElementById("css2").innerHTML = 'transform:' + text + ';';
+                } else if (num === 3) {
+                    document.getElementById("css1").innerHTML = 'transform-origin:right top;';
                 }
 
 
@@ -129,7 +131,7 @@
                 <tr>
                     <td>5</td>
                     <td>
-                        <div class="box rotate origin" onclick="subtext(2,'translate(10px,20px)')">旋轉中心</div>
+                        <div class="box rotate origin" onclick="subtext(3,'translate-origin')">旋轉中心</div>
                     </td>
                     <td>transform-origin:x y z;</td>
                 </tr>
