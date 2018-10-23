@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 animation 教學簡報</title>
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Cookie" rel="stylesheet">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mousewheel.js"></script>
+    <script src="slide.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <ul>
+                <li style="background-color:#00b7c0"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div id="p01" class="slide">
+            <!-- <img src="chi_logo.svg" width="80" style="padding: 15px 0 0 15px;"> -->
+            <div style="position: relative;
+        top:50%;
+        transform: translateY(-50%);">
+                <p class="big_title">CSS3 animation 動畫課程</p>
+                <hr>
+                <p class="subtitle">講師：陳綺</p>
+                <p class="subtitle">日期：2018/10/25(星期四)</p>
+            </div>
+        </div>
+        <div id="p02" class="slide">
+            <p class="title">Tansition 漸變(轉場)</p>
+            <hr>
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        <div class="demo ease" onclick="subtext(1,'ease')">ease</div>
+                    </td>
+                    <td>開始慢速、中間快速、結尾慢速</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <div class="demo ease-in" onclick="subtext(1,'ease-in')">ease-in</div>
+                    </td>
+                    <td>開始慢速、結尾快速</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <div class="demo ease-out" onclick="subtext(1,'ease-out')">ease-out</div>
+                    </td>
+                    <td>開始快速、結尾慢速</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <div class="demo linear" onclick="subtext(1,'linear')">linear</div>
+                    </td>
+                    <td>全程等速度</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>
+                        <div class="demo linear" onclick="subtext(1,'linear')">cubic-bezier</div>
+                    </td>
+                    <td>貝茲曲線cubic-bezier(x1,y1,x2,y2)</td>
+                </tr>
+            </table><br>
+            <pre id="css1">transition:作用的css屬性 時間 速度;</pre>
+            <script>
+            function subtext(num, text) {
+                if (num === 1) {
+                    document.getElementById("css1").innerHTML = 'transition:all 2s ' + text + ';';
+                } else if (num === 2) {
+                    document.getElementById("css2").innerHTML = 'transform:' + text + ';';
+                }
+
+
+            }
+            </script>
+        </div>
+        <div id="p03" class="slide">
+            <p class="title">Transform 變形動作</p>
+            <hr>
+            <table>
+                <tr>
+                    <th>編號</th>
+                    <th>範例</th>
+                    <th>說明</th>
+                </tr>
+                <tr>
+                    <td width="40px">1</td>
+                    <td width="100px">
+                        <div class="box scale" onclick="subtext(2,'scale(2)')">scale</div>
+                    </td>
+                    <td>放大縮小(倍數)</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>
+                        <div class="box rotate" onclick="subtext(2,'rotate(30deg)')">rotate</div>
+                    </td>
+                    <td>旋轉(deg度數)</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>
+                        <div class="box skew" onclick="subtext(2,'skew(30deg)')">skew</div>
+                    </td>
+                    <td>傾斜(deg度數)</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>
+                        <div class="box translate" onclick="subtext(2,'translate(10px,20px)')">translate</div>
+                    </td>
+                    <td>移動(x,y)</td>
+                </tr>
+            </table><br>
+            <pre id="css2">transform:效果(數值);</pre>
+        </div>
+        <div id="p04" class="slide">
+            <p class="title">Animation 動畫</p>
+            <hr>
+            <div id="CARD" class="card">
+                <div id="BACK">
+                    <h1>網路位元組</h1>
+                    <p>歡迎加入網路位元組，我們是隸屬於第一校區資管系的網路組(學生組織)，協助提供系上老師及同學相關資訊服務。</p>
+                    <center><img src="byte_logo_white.svg" alt="logo" width="200"></center>
+                </div>
+                <div id="FRONT">
+                    <img src="photo.jpg" width="500" height="500">
+    </div>
+                </div>
+                <p style="color: #aaa;font-size:12px;transform:  translate(380px,10px);">©Photo by rawpixel.com from Pexels</p>
+                <button>翻面</button>
+                <script>
+                $(document).ready(function() {
+                    $("button").click(function() {
+                        $(".card").toggleClass("clip");
+                    });
+                });
+                </script>
+            </div>
+            <div id="p05" class="slide"><h1>Page 5</h1>
+            </div>
+        </div>
+        <!-- Load Facebook SDK for JavaScript -->
+        <div id="fb-root"></div>
+        <script>
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://connect.facebook.net/zh_TW/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+        </script>
+        <!-- Your customer chat code -->
+        <div class="fb-customerchat" attribution=setup_tool page_id="133005247571653" theme_color="#00b7c0" logged_in_greeting="別害羞!來跟我聊聊天:)" logged_out_greeting="別害羞!來跟我聊聊天:)">
+        </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+    .demo {
+    	color:#000;
+        cursor:pointer;
+        line-height: 2em;
+    }
+    .demo:hover {
+    	color:#F00;
+    }
+    .ease {
+    	transition:all 2s ease;
+    }
+    .ease-in {
+    	transition:all 2s ease-in;
+    }
+    .ease-out {
+    	transition:all 2s ease-out;
+    }
+    .linear {
+    	transition:all 2s linear;
+    }
+    .box {
+    	width:80px;
+        height:80px;
+        line-height:80px;
+        text-align:center;
+        background:#eee;
+        display:inline-block;
+        cursor:pointer;
+    }
+    .scale:hover {
+    	transform:scale(2);
+    }
+    .rotate:hover {
+    	transform:rotate(30deg); /*rotateX基於Ｘ軸旋轉;rotateY基於Y軸旋轉*/
+    }
+    .skew:hover {
+    	transform:skew(30deg);
+    }
+    .translate:hover {
+    	transform:translate(10px,20px);/*translateX水平移動;translateY垂直移動*/
+    }
+    .animation {
+    	animation:magic 0.5s infinite alternate;
+    }
+    @keyframes magic {
+    	0%{transform:translateX(0px) scale(1);}/*套用多個tranform時，用空白連接*/
+        100%{transform:translateX(50px) scale(2);}
+    }

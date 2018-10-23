@@ -1,0 +1,92 @@
+#CARD{
+		position:relative;
+		width:500px;
+		height:500px;
+		border:20px solid #FFF;
+		box-shadow:0px 0px 15px #999999;
+		margin:0 auto;
+	}
+	
+	#FRONT{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:500px;
+		height:500px;
+		background-color:#0093c6;
+	}
+	
+	#BACK{
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:500px;
+		height:500px;
+		background-color:#CCC;
+	}
+	
+	h1{
+		font-size:4em;
+		text-align:center;
+		color:#FFF;
+		font-family: 'Six Caps', sans-serif;
+		-webkit-font-smoothing: antialiased;
+   		-moz-osx-font-smoothing: grayscale;
+		padding-top:50px;
+		text-shadow:1px 1px 1px #333;
+	}
+	#BACK p{
+		font-size:1em;
+		font-family:Arial, Helvetica, sans-serif;
+		padding:0px 50px;
+		color:#FFF;
+		text-align:justify;
+	}
+		
+	/* ==CSS3動畫練習============================ */
+			
+	#FRONT{
+		-webkit-backface-visibility: hidden;
+	}
+	
+	#BACK{
+		-webkit-backface-visibility: hidden;
+		-webkit-transform:rotate3d(-1,0,0, 180deg);
+	}
+
+	#CARD{
+		-webkit-transform-style: preserve-3d;
+		-webkit-transform-origin: 50% 50% 0;
+	}
+
+	/*#BOX:hover{
+		-webkit-animation: GOGO 1.5s 1 linear;
+        animation-fill-mode:both;
+	}*/
+   
+
+	.clip {
+    	animation: GOGO 1.5s 1 linear alternate;
+        animation-fill-mode:both;
+    }
+
+	@keyframes GOGO
+	{
+		0% {-webkit-transform: perspective(1000px) rotate3d(1,0,0, 0deg);}
+		100% {-webkit-transform: perspective(1000px) rotate3d(-1,0,0, 180deg);}
+	}
+
+	button {
+		padding:8px 16px;
+		border:none;
+		border-radius:32px;
+		background:#00b7c0;
+		color:#FFF;
+		font-weight: bold;
+		position:relative;
+		left:50%;
+		transform: translateX(-50%);
+		margin-top:5px;
+		outline:none;
+		cursor:pointer;
+	}
