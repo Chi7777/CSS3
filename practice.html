@@ -15,6 +15,10 @@
         height: 500px;
         transform-style: preserve-3d;
         /*讓內層物件同時擁有3D狀態*/
+
+        margin:0 auto;
+        border:20px solid #FFF;
+        box-shadow:0px 0px 15px #999999;
     }
 
     #front,
@@ -29,11 +33,11 @@
     }
 
     #front {
-        background: #eee;
+        background: #FFF;
     }
 
     #back {
-        background: #f00;
+        background: #eee;
         transform: rotate3d(-1, 0, 0, 180deg);
         /*先將背面轉向後方*/
     }
@@ -56,8 +60,8 @@
 
 <body>
     <div id="box">
-        <div id="front">正面</div>
-        <div id="back">背面</div>
+        <div id="front"><img src="img/photo.jpg" width="500" height="500"></div>
+        <div id="back">跟你說個秘密唷</div>
     </div>
     <button>點我</button>
     <script>
