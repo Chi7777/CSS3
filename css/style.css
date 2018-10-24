@@ -124,6 +124,7 @@ hr {
 
 pre {
     width: 50%;
+    text-overflow : ellipsis;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
