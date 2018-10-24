@@ -39,9 +39,12 @@
             } else if ($(window).scrollTop() >= $("#p05").offset().top && $(window).scrollTop() < $("#p06").offset().top) {
                 $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
                 $(".nav li:eq(4)").css("background-color", "#00b7c0")
-            } else if ($(window).scrollTop() >= $("#p06").offset().top) {
+            } else if ($(window).scrollTop() >= $("#p06").offset().top && $(window).scrollTop() < $("#p07").offset().top) {
                 $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
                 $(".nav li:eq(5)").css("background-color", "#00b7c0")
+            } else if ($(window).scrollTop() >= $("#p07").offset().top) {
+                $(".nav li").css("background-color", "#525252") //除了被點擊到的游標，其他都恢復成原來的顏色
+                $(".nav li:eq(6)").css("background-color", "#00b7c0")
             } 
         })
 

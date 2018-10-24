@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>練習</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+    /*一：box的position:relative
+    內容物正面、背面設為absolute，並設定left:0;top:0;使兩個div重疊在一起*/
+
+    #box {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        transform-style: preserve-3d;
+        /*讓內層物件同時擁有3D狀態*/
+    }
+
+    #front,
+    #back {
+        width: 500px;
+        height: 500px;
+        backface-visibility: hidden;
+        /*翻轉到背面時，不會顯示內容*/
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #front {
+        background: #eee;
+    }
+
+    #back {
+        background: #f00;
+        transform: rotate3d(-1, 0, 0, 180deg);
+        /*先將背面轉向後方*/
+    }
+
+    .clip {
+        animation: clip 3s 1 linear forwards;
+    }
+
+    @keyframes clip {
+        from {
+            transform: perspective(1000px) rotate3d(1, 0, 0, 0deg);
+        }
+
+        to {
+            transform: perspective(1000px) rotate3d(-1, 0, 0, 180deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <div id="front">正面</div>
+        <div id="back">背面</div>
+    </div>
+    <button>點我</button>
+    <script>
+        $("button").click(function() {
+            $("#box").toggleClass("clip");
+        });
+    </script>
+</body>
+
+</html>

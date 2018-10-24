@@ -6,7 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
 <link rel="icon" href="img/favicon.png" type="image/png"/>
 <style>
-*{
+	*{
 		margin:0;
 		padding:0;
 	}
@@ -47,7 +47,7 @@
 		text-align:center;
 		color:#FFF;
 		font-family: 'Six Caps', sans-serif;
-		-webkit-font-smoothing: antialiased;
+		font-smoothing: antialiased;
    		-moz-osx-font-smoothing: grayscale;
 		padding-top:50px;
 		text-shadow:1px 1px 1px #333;
@@ -63,17 +63,17 @@
 	/* ==CSS3動畫練習============================ */
 			
 	#FRONT{
-		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
 	}
 	
 	#BACK{
-		-webkit-backface-visibility: hidden;
-		-webkit-transform:rotate3d(-1,0,0, 180deg);
+		backface-visibility: hidden;
+		transform:rotate3d(-1,0,0, 180deg);
 	}
 
 	#BOX{
-		-webkit-transform-style: preserve-3d;
-		-webkit-transform-origin: 50% 50% 0;
+		transform-style: preserve-3d;
+		transform-origin: 50% 50% 0;
 	}
    
 
@@ -84,8 +84,8 @@
 
 	@keyframes GOGO
 	{
-		0% {-webkit-transform: perspective(1000px) rotate3d(1,0,0, 0deg);}
-		100% {-webkit-transform: perspective(1000px) rotate3d(-1,0,0, 180deg);}
+		0% {transform: perspective(1000px) rotate3d(1,0,0, 0deg);}
+		100% {transform: perspective(1000px) rotate3d(-1,0,0, 180deg);}
 	}
 
 	.button {
