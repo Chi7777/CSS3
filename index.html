@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>CSS3 animation｜網路位元組</title>
     <link href="https://fonts.googleapis.com/css?family=Boogaloo|Cookie" rel="stylesheet">
-    <link rel="icon" href="img/favicon.png" type="image/png"/>
+    <link rel="icon" href="img/favicon.png" type="image/png" />
     <link rel="stylesheet" href="css/demo.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animation.css">
@@ -89,7 +89,7 @@
                     document.getElementById("css1").innerHTML = 'transition:all 2s ' + text + ';';
                 } else if (num === 2) {
                     document.getElementById("css2").innerHTML = 'transform:' + text + ';';
-                } 
+                }
 
 
             }
@@ -144,53 +144,55 @@
         <div id="p04" class="slide">
             <p class="title">Animation 動畫屬性總覽</p>
             <hr>
-            <table>
-                <tr>
-                    <th>編號</th>
-                    <th>屬性</th>
-                    <th>說明</th>
-                </tr>
-                <tr>
-                    <td width="40px">1</td>
-                    <td width="200px">animation-name</td>
-                    <td>動畫名稱</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>animation-duration</td>
-                    <td>動畫持續時間，<b>預設 0</b>，單位 s 或 ms。</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>animation-delay</td>
-                    <td>動畫延遲播放時間，<b>預設 0</b>，單位 s 或 ms。</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>animation-iteration-count</td>
-                    <td>動畫播放次數，<b>預設 1</b>。無限次：infinite。</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>animation-timing-function</td>
-                    <td>動畫速度，<b>預設 ease</b>。</td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td>animation-direction</td>
-                    <td>動畫播放方向，<b>預設 normal</b>。其他還有 reverse、alternate、alternate-reverse。</td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td>animation-fill-mode</td>
-                    <td>動畫播放前後模式，<b>預設 none</b>。其他還有 forwards、backwards、both。</td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td>animation-play-state</td>
-                    <td>動畫播放或暫停狀態，<b>預設 running</b>。其他還有 paused。</td>
-                </tr>
-            </table>
+            <div style="overflow-y:auto;max-height: 550px;">
+                <table>
+                    <tr>
+                        <th>編號</th>
+                        <th>屬性</th>
+                        <th>說明</th>
+                    </tr>
+                    <tr>
+                        <td width="40px">1</td>
+                        <td width="200px">animation-name</td>
+                        <td>動畫名稱</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>animation-duration</td>
+                        <td>動畫持續時間，<b>預設 0</b>，單位 s 或 ms。</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>animation-delay</td>
+                        <td>動畫延遲播放時間，<b>預設 0</b>，單位 s 或 ms。</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>animation-iteration-count</td>
+                        <td>動畫播放次數，<b>預設 1</b>。無限次：infinite。</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>animation-timing-function</td>
+                        <td>動畫速度，<b>預設 ease</b>。</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>animation-direction</td>
+                        <td>動畫播放方向，<b>預設 normal</b>。其他還有 reverse、alternate、alternate-reverse。</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>animation-fill-mode</td>
+                        <td>動畫播放前後模式，<b>預設 none</b>。其他還有 forwards、backwards、both。</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>animation-play-state</td>
+                        <td>動畫播放或暫停狀態，<b>預設 running</b>。其他還有 paused。</td>
+                    </tr>
+                </table>
+            </div>
         </div>
         <div id="p05" class="slide">
             <p class="title">Animation 動畫（一）</p>
@@ -213,7 +215,6 @@
         </div>
         <div id="p06" class="slide">
             <p class="title">Animation 動畫（二）<a href="demo.html">DEMO</a></p>
-
             <hr>
             <div id="CARD" class="card">
                 <div id="BACK">
