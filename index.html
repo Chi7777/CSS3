@@ -206,8 +206,16 @@
             </div>
         </div>
         <div id="p06" class="slide">
-            <p class="title">Animation 動畫（一）</p>
+            <p class="title">Animation 動畫（一）</p><button class="btn_play" id="play">play</button>
             <hr>
+            <script>
+            $(document).ready(function() {
+                $("#play").click(function() {
+                    $(".animation").css({ "animation-play-state": "running" });
+                    $(".forwards").css({ "animation-play-state": "running" });
+                });
+            });
+            </script>
             <div class="box animation">重播</div>
             <div class="box forwards">定格</div><br><br>
             <pre>.animation {
@@ -225,7 +233,7 @@
 }</pre>
         </div>
         <div id="p07" class="slide">
-            <p class="title">Animation 動畫（二）<a href="demo.html">DEMO</a></p>
+            <p class="title">Animation 動畫（二）</p><a href="demo.html">DEMO</a>
             <hr>
             <div id="CARD" class="card">
                 <div id="BACK">
@@ -238,10 +246,10 @@
     </div>
                 </div>
                 <p style="color: #aaa;font-size:12px;transform:  translate(30%,10px);">©Photo by rawpixel.com from Pexels</p>
-                <button class="button">翻面</button>
+                <button class="button" id="clip">翻面</button>
                 <script>
                 $(document).ready(function() {
-                    $("button").click(function() {
+                    $("#clip").click(function() {
                         $(".card").toggleClass("clip");
                     });
                 });

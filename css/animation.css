@@ -76,7 +76,7 @@
 		100% {-webkit-transform: perspective(1000px) rotate3d(-1,0,0, 180deg);}
 	}
 
-	button {
+	.button {
 		padding:8px 16px;
 		border:none;
 		border-radius:32px;

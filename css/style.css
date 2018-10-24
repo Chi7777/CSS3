@@ -100,6 +100,7 @@ p.title {
     font-family: 'Boogaloo', sans-serif;
     font-size: 3em;
     padding: 20px 0 0 60px;
+    display: inline-block;
 }
 
 p.big_title {
@@ -140,3 +141,14 @@ pre {
     border: 1px solid #EFEFEF;
     border-radius: 5px;
 }
+.btn_play {
+        padding:8px 16px;
+        border:none;
+        border-radius:32px;
+        background:#00b7c0;
+        color:#FFF;
+        font-weight: bold;
+        outline:none;
+        display: inline-block;
+        cursor:pointer;
+    }

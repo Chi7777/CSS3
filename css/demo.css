@@ -47,10 +47,12 @@
     }
     .animation {
     	animation:ball 3s infinite alternate;
+        animation-play-state: paused;
     }
     .forwards {
         animation:ball 3s 1;
         animation-fill-mode:forwards;
+        animation-play-state: paused;
     }
     @keyframes ball {
     	0%{transform:translateX(300px) rotate(0deg);}/*套用多個tranform時，用空白連接*/
