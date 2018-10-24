@@ -42,6 +42,11 @@
             <hr>
             <table>
                 <tr>
+                    <th>編號</th>
+                    <th>屬性</th>
+                    <th>說明</th>
+                </tr>
+                <tr>
                     <td>1</td>
                     <td>
                         <div class="demo ease" onclick="subtext(1,'ease')">ease</div>
@@ -84,9 +89,7 @@
                     document.getElementById("css1").innerHTML = 'transition:all 2s ' + text + ';';
                 } else if (num === 2) {
                     document.getElementById("css2").innerHTML = 'transform:' + text + ';';
-                } else if (num === 3) {
-                    document.getElementById("css1").innerHTML = 'transform-origin:right top;';
-                }
+                } 
 
 
             }
@@ -131,7 +134,7 @@
                 <tr>
                     <td>5</td>
                     <td>
-                        <div class="box rotate origin" onclick="subtext(3,'translate-origin')">旋轉中心</div>
+                        <div class="box rotate origin" onclick="css2.innerHTML='transform-origin:right top;'">旋轉中心</div>
                     </td>
                     <td>transform-origin:x y z;</td>
                 </tr>

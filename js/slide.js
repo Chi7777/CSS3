@@ -56,18 +56,5 @@
                 n = e.data.id + 1
             })
         }
-        //  //一進入網頁時，將導覽列垂直置中計算導覽列置中的位置
-        // center()
-
-        // //縮放網頁時，將導覽列垂直置中
-        //  $(window).resize(function(){
-        //      center()
-        //  })
-
-        //  //計算導覽列垂直置中的高度
-        //  function center(){
-        //      pos=$(window).height()/2-$(".nav").height()/2
-        //      $(".nav").css("top",pos)
-        //  }
 
     })
