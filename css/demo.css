@@ -55,9 +55,9 @@
         animation-play-state: paused;
     }
     @keyframes ball {
-    	0%{transform:translateX(300px) rotate(0deg);}/*套用多個tranform時，用空白連接*/
-        50%{transform:translateX(300px) rotate(0deg);}
-        100%{transform:translateX(800px) rotate(360deg);border-radius:50%;background: #f00;}
+    	0%{transform:translateX(250px) rotate(0deg);}/*套用多個tranform時，用空白連接*/
+        50%{transform:translateX(250px) rotate(0deg);}
+        100%{transform:translateX(700px) rotate(360deg);border-radius:50%;background: #f00;}
     }
     .center {
         position: relative;
